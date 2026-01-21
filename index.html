@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#111111" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Lofi Pomodoro (Offline)</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Lofi × Pomodoro</h1>
+        <div class="sub">通信量最小（音源同梱 / オフライン対応）</div>
+      </header>
+
+      <main>
+        <section class="card">
+          <div class="row">
+            <div class="label">Mode</div>
+            <div id="mode" class="value">WORK</div>
+          </div>
+
+          <div id="time" class="time">25:00</div>
+
+          <div class="controls">
+            <button id="startPause" class="primary">Start</button>
+            <button id="skip">Skip</button>
+            <button id="reset">Reset</button>
+          </div>
+
+          <div class="row small">
+            <div>Pomodoros Today: <span id="count">0</span></div>
+            <div class="muted">Auto long break: 4th</div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Sound</h2>
+
+          <div class="row">
+            <label class="toggle">
+              <input id="bgmOn" type="checkbox" checked />
+              <span>BGM</span>
+            </label>
+            <input id="bgmVol" type="range" min="0" max="100" value="45" />
+          </div>
+
+          <div class="row">
+            <label class="toggle">
+              <input id="rainOn" type="checkbox" />
+              <span>Rain</span>
+            </label>
+            <input id="rainVol" type="range" min="0" max="100" value="25" />
+          </div>
+
+          <div class="row small muted">
+            iOSは「最初の再生」がユーザー操作必須。Startボタンで一緒に開始します。
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Settings</h2>
+          <div class="grid">
+            <label>Work (min)
+              <input id="workMin" type="number" min="1" max="180" value="25" />
+            </label>
+            <label>Break (min)
+              <input id="breakMin" type="number" min="1" max="60" value="5" />
+            </label>
+            <label>Long break (min)
+              <input id="longMin" type="number" min="1" max="120" value="15" />
+            </label>
+            <label>Long break every
+              <input id="longEvery" type="number" min="2" max="10" value="4" />
+            </label>
+          </div>
+          <div class="controls">
+            <button id="save">Save</button>
+          </div>
+          <div id="status" class="small muted"></div>
+        </section>
+      </main>
+
+      <footer class="small muted">
+        PWA: ホーム画面に追加するとオフラインでも動きます。
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
