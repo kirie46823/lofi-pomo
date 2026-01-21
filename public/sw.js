@@ -3,10 +3,7 @@ const CACHE_NAME = "lofi-pomo-cache-v2";
 // ここに“確実にオフライン化したいファイル”を列挙
 const PRECACHE_URLS = [
   "/",
-  "/index.html",
   "/manifest.webmanifest",
-  "/src/main.js",
-  "/src/style.css",
   "/audio/111.mp3"
 ];
 
