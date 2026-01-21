@@ -1,10 +1,10 @@
-const CACHE_NAME = "lofi-pomo-cache-v2";
+const CACHE_NAME = "lofi-pomo-cache-v3";
 
 // ここに“確実にオフライン化したいファイル”を列挙
 const PRECACHE_URLS = [
-  "/",
-  "/manifest.webmanifest",
-  "/audio/111.mp3"
+  "./",
+  "manifest.webmanifest",
+  "audio/111.mp3"
 ];
 
 self.addEventListener("install", (event) => {
