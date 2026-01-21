@@ -70,10 +70,12 @@ function mergeState(base, patch) {
 }
 
 // --- Audio (HTMLAudio keeps it simple and light) ---
+const BGM_SRC = `${import.meta.env.BASE_URL}audio/111.mp3`;
 const audio = {
-  bgm: new Audio("/audio/111.mp3"),
+  bgm: new Audio(BGM_SRC),
   ready: false,
 };
+
 
 function setupAudio() {
   const a = audio.bgm;
