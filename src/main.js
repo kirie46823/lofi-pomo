@@ -289,11 +289,6 @@ els.save.addEventListener("click", () => {
   render();
 });
 
-// Stop audio when tab hidden (optional)
-document.addEventListener("visibilitychange", () => {
-  // 通信量には関係ない。電池節約。好みで。
-  if (document.hidden) pauseAll();
-});
 
 // --- SW register ---
 if ("serviceWorker" in navigator) {
